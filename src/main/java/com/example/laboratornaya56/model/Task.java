@@ -10,7 +10,7 @@ import java.time.LocalDate;
 
 
 @Data
-@Document
+@Document(collection = "tasks")
 @AllArgsConstructor
 public class Task {
 

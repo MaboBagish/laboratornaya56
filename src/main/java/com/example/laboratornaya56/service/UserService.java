@@ -17,7 +17,13 @@ public class UserService {
     private final UserRepository userRepository;
 
 
-    public User registration(String password, String email) {
-        return userRepository.save(new User(password, email));
+    public boolean registration(String password, String email) {
+        if (userRepository.existsByEmail(email)) {
+
+            return true;
+        }else{
+            userRepository.save(new User(password, email));
+            return false;
+        }
     }
 }
