@@ -39,6 +39,11 @@ public final class Generator {
         return makeGibberish(20, 10);
     }
 
+
+    public static String makeHeading() {
+        return makeGibberish(20, 10);
+    }
+
     private static String makeGibberish(int randomAmount, int min) {
         if (randomAmount <= 0) {
             randomAmount = 1;
@@ -59,6 +64,7 @@ public final class Generator {
     public static String makeName() {
         return makeGibberish(3,2);
     }
+
 
     private static String takeOneWord() {
         return loremWords.get(r.nextInt(loremWords.size()));
